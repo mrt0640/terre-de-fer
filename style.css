@@ -1,0 +1,296 @@
+/* Terre de Fer Türkiye - Modern & Rustik Stil Masası */
+
+:root {
+    --bg-color: #f9f7f4;      /* Çok hafif sıcak bej */
+    --accent-color: #d8cfc4;  /* Toprak tonu */
+    --text-dark: #2c2c2c;     /* Antrasit siyah */
+    --text-light: #6b645d;    /* Yumuşak vizon */
+    --white: #ffffff;
+    --brand-font: 'Playfair Display', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Sayfa içi geçişleri yumuşatma */
+}
+
+/* Duyuru Çubuğu */
+.announcement-bar {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Navigasyon */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 8%;
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    font-family: var(--brand-font);
+    font-size: 26px;
+    letter-spacing: 6px; /* Terre de Fer markasını daha geniş ve lüks gösterir */
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--text-light);
+}
+
+/* Hero Bölümü */
+.hero {
+    height: 95vh;
+    /* images klasöründeki ana görselin adını buraya yaz */
+    background: url('images/WhatsApp\ Image\ 2026-04-01\ at\ 11.36.16\ \(4\).jpeg') no-repeat center center/cover; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+/* Ürün Kartları Görselleri */
+.image-1 { background-image: url('images/WhatsApp\ Image\ 2026-04-01\ at\ 11.36.16.jpeg'); }
+.image-2 { background-image: url('images/WhatsApp\ Image\ 2026-04-01\ at\ 11.36.16\ \(1\).jpeg'); }
+.image-3 { background-image: url('images/WhatsApp\ Image\ 2026-04-01\ at\ 11.36.16\ \(2\).jpeg'); }
+
+
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.15); 
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    max-width: 800px;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dark);
+    display: block;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: var(--brand-font);
+    font-size: clamp(2.5rem, 6vw, 4.5rem); /* Ekran boyutuna göre otomatik küçülür */
+    font-weight: 400;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 16px 45px;
+    background: var(--text-dark);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    transition: 0.4s ease-in-out;
+    border: 1px solid var(--text-dark);
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: var(--text-dark);
+}
+
+/* Ortak Bölüm Başlıkları */
+.section-title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-title h2 {
+    font-family: var(--brand-font);
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.underline {
+    width: 40px;
+    height: 1px;
+    background: var(--text-dark);
+    margin: 20px auto;
+}
+
+/* Grid / Koleksiyon Bölümü */
+.grid-section {
+    padding: 120px 8% 80px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card-image {
+    height: 500px; /* Biraz daha uzun Maison Odette tarzı görseller */
+    background-color: #eee;
+    margin-bottom: 25px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+}
+
+.card:hover .card-image {
+    transform: scale(1.02); /* Hafif büyüme efekti */
+}
+
+.card h3 {
+    font-family: var(--brand-font);
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 13px;
+    color: var(--text-light);
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Footer Stil */
+footer {
+    background-color: #f1efeb;
+    color: var(--text-light);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: var(--brand-font);
+    font-size: 20px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    display: block;
+    color: var(--text-dark);
+}
+
+.copyright {
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+/* Hakkımızda Bölümü Stilleri */
+.about-section {
+    padding: 100px 8%;
+    background-color: #fff; /* Sayfada kontrast yaratmak için saf beyaz */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-family: var(--brand-font);
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    box-shadow: 20px 20px 0px var(--accent-color); /* Rustik bir çerçeve efekti */
+}
+
+.btn-secondary {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--text-dark);
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    color: var(--text-light);
+    border-color: var(--text-light);
+}
+
+/* Mobil Uyumluluk İçin Küçük Bir Dokunuş */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
