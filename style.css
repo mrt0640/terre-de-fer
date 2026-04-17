@@ -185,9 +185,9 @@ body {
 }
 
 /* Ürün Kart Görselleri */
-.image-1 { background-image: url('images/WhatsApp\ Image\ 2026-04-01\ at\ 11.36.16.jpeg'); }
-.image-2 { background-image: url('images/WhatsApp\ Image\ 2026-04-01\ at\ 11.36.16\ \(1\).jpeg'); }
-.image-3 { background-image: url('images/WhatsApp\ Image\ 2026-04-01\ at\ 11.36.16\ \(2\).jpeg'); }
+.image-1 { background-image: url('images/image1.jpeg'); }
+.image-2 { background-image: url('images/image2.jpeg'); }
+.image-3 { background-image: url('images/image3.jpeg'); }
 
 .card-image {
     height: 500px;
