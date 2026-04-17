@@ -93,6 +93,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    background-attachment: fixed; /* Görselin arkada sabit kalmasını sağlar */
 }
 
 .hero-overlay {
@@ -111,12 +112,11 @@ body {
 
 .subtitle {
     text-transform: uppercase;
-    letter-spacing: 6px;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text-dark);
-    display: block;
-    margin-bottom: 25px;
+    letter-spacing: 5px; /* Harfler arasındaki boşluk asalet katar */
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-light);
+    margin-bottom: 20px;
 }
 
 .hero h1 {
@@ -160,7 +160,9 @@ body {
 
 .section-title h2 {
     font-family: var(--brand-font);
-    font-size: 34px;
+    font-size: 38px;
+    font-weight: 400;
+    font-style: italic; /* Maison Odette dokunuşu: Başlıklarda hafif italik kullanımı */
     letter-spacing: 1px;
 }
 
