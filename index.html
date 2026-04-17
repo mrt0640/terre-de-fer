@@ -8,31 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<script>
-        // Navbar Kaydırma Efekti
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Smooth Scroll (Yumuşak Kaydırma) - Bazı tarayıcılar için ek destek
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-</body>
-</html>
-
-
 <body>
 
     <div class="announcement-bar">
@@ -48,16 +23,6 @@
             <li><a href="https://www.instagram.com/terre.de.fer.turkiye" target="_blank">Instagram</a></li>
         </ul>
     </nav>
-
-    <section id="contact" style="padding: 100px 8%; text-align: center; background-color: #fff;">
-    <div class="section-title">
-        <span class="subtitle">Bize Ulaşın</span>
-        <h2>Sizi Dinlemek İsteriz</h2>
-        <div class="underline"></div>
-        <a href="https://www.instagram.com/terre.de.fer.turkiye" target="_blank" class="btn-primary" style="margin-top: 30px;">INSTAGRAM'DAN YAZIN</a>
-    </div>
-</section>
-
 
     <header class="hero" id="home">
         <div class="hero-overlay"></div>
@@ -125,36 +90,64 @@
             <h2>Sizi Dinlemek İsteriz</h2>
             <div class="underline"></div>
             <p style="color: var(--text-light); max-width: 600px; margin: 20px auto;">
-                Özel siparişler, iş birlikleri veya merak ettikleriniz için bize e-posta yoluyla ulaşabilirsiniz.
+                Özel siparişler, iş birlikleri veya merak ettikleriniz için bize Instagram üzerinden veya e-posta ile ulaşabilirsiniz.
             </p>
-            <a href="mailto:merhaba@terredefer.com.tr" class="btn-primary" style="margin-top: 30px;">E-POSTA GÖNDER</a>
+            <div style="margin-top: 30px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="https://www.instagram.com/terre.de.fer.turkiye" target="_blank" class="btn-primary">INSTAGRAM'DAN YAZIN</a>
+                <a href="mailto:merhaba@terredefer.com.tr" class="btn-primary" style="background: transparent; color: var(--text-dark);">E-POSTA GÖNDER</a>
+            </div>
         </div>
     </section>
 
     <footer style="padding: 80px 8%; background: #f1efeb; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left;">
-    <div class="footer-col">
-        <div class="footer-logo" style="font-size: 22px; margin-bottom: 20px;">TERRE DE FER</div>
-        <p style="font-size: 13px; color: var(--text-light);">Doğadan ilham alan, zamansız ve sürdürülebilir tasarımlar.</p>
-    </div>
-    <div class="footer-col">
-        <h4 style="font-size: 14px; margin-bottom: 20px; letter-spacing: 2px;">KEŞFET</h4>
-        <ul style="list-style: none; font-size: 12px; line-height: 2.5;">
-            <li><a href="#collection" style="text-decoration: none; color: var(--text-light);">Koleksiyon</a></li>
-            <li><a href="#about" style="text-decoration: none; color: var(--text-light);">Hikayemiz</a></li>
-            <li><a href="#contact" style="text-decoration: none; color: var(--text-light);">İletişim</a></li>
-        </ul>
-    </div>
-    <div class="footer-col">
-        <h4 style="font-size: 14px; margin-bottom: 20px; letter-spacing: 2px;">TAKİP ET</h4>
-        <ul style="list-style: none; font-size: 12px; line-height: 2.5;">
-            <li><a href="#" style="text-decoration: none; color: var(--text-light);">Instagram</a></li>
-            <li><a href="#" style="text-decoration: none; color: var(--text-light);">Pinterest</a></li>
-        </ul>
-    </div>
-</footer>
-<div style="text-align: center; padding: 20px; background: #f1efeb; font-size: 10px; color: #999; border-top: 1px solid #e5e2dd;">
-    &copy; 2026 TERRE DE FER TÜRKİYE. TÜM HAKLARI SAKLIDIR.
-</div>
+        <div class="footer-col">
+            <div class="footer-logo" style="font-size: 22px; margin-bottom: 20px; letter-spacing: 8px;">TERRE DE FER</div>
+            <p style="font-size: 13px; color: var(--text-light);">Doğadan ilham alan, zamansız ve sürdürülebilir tasarımlar.</p>
+        </div>
+        <div class="footer-col">
+            <h4 style="font-size: 14px; margin-bottom: 20px; letter-spacing: 2px;">KEŞFET</h4>
+            <ul style="list-style: none; font-size: 12px; line-height: 2.5;">
+                <li><a href="#home" style="text-decoration: none; color: var(--text-light);">Anasayfa</a></li>
+                <li><a href="#collection" style="text-decoration: none; color: var(--text-light);">Koleksiyon</a></li>
+                <li><a href="#about" style="text-decoration: none; color: var(--text-light);">Hikayemiz</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 style="font-size: 14px; margin-bottom: 20px; letter-spacing: 2px;">TAKİP ET</h4>
+            <ul style="list-style: none; font-size: 12px; line-height: 2.5;">
+                <li><a href="https://www.instagram.com/terre.de.fer.turkiye" target="_blank" style="text-decoration: none; color: var(--text-light);">Instagram</a></li>
+                <li><a href="#" style="text-decoration: none; color: var(--text-light);">Pinterest</a></li>
+            </ul>
+        </div>
+    </footer>
 
+    <div style="text-align: center; padding: 20px; background: #f1efeb; font-size: 10px; color: #999; border-top: 1px solid #e5e2dd; letter-spacing: 1px;">
+        &copy; 2026 TERRE DE FER TÜRKİYE. TÜM HAKLARI SAKLIDIR.
+    </div>
+
+    <script>
+        // Navbar Kaydırma Efekti
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth Scroll (Yumuşak Kaydırma)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
