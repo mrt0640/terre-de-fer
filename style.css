@@ -59,10 +59,11 @@ body {
 
 .logo {
     font-family: var(--brand-font);
-    font-size: 26px;
-    letter-spacing: 6px;
-    font-weight: 700;
+    font-size: 20px; /* Biraz küçülttük */
+    letter-spacing: 10px; /* Harf aralığını mühürlerindeki gibi açtık */
+    font-weight: 300;
     text-transform: uppercase;
+    color: var(--text-dark);
 }
 
 .nav-links {
@@ -253,25 +254,28 @@ body {
     margin-bottom: 30px;
 }
 
-.about-image img {
-    width: 100%;
-    height: auto;
-    box-shadow: 20px 20px 0px var(--accent-color);
-}
 
-/* --- Instagram Alanı --- */
+/* Instagram Görselleri İçin "Antique" Filtresi */
 .insta-item img {
     width: 100%;
-    height: 300px;
+    height: 350px;
     object-fit: cover;
-    filter: grayscale(20%);
-    transition: 0.5s;
+    filter: sepia(15%) contrast(90%) brightness(105%); /* Instagram'daki o sıcak tonu yakalar */
+    transition: 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
 .insta-item img:hover {
-    filter: grayscale(0%);
+    filter: sepia(0%) contrast(100%) brightness(100%);
+    transform: scale(1.03);
 }
 
+/* About Image: Instagram'daki mühürlü detaylardan birini buraya koymalısın */
+.about-image img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.05)); /* Daha yumuşak bir gölge */
+    border-radius: 2px;
+}
 /* --- Footer --- */
 footer {
     background-color: #f1efeb;
@@ -316,4 +320,16 @@ footer {
     .hero h1 {
         font-size: 2.5rem;
     }
+}
+.insta-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    filter: sepia(10%) contrast(95%); /* Senin ürünlerindeki o antika sıcaklığı verir */
+    transition: 0.6s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.insta-item img:hover {
+    filter: sepia(0%) contrast(100%);
+    transform: scale(1.02);
 }
